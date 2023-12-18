@@ -35,5 +35,6 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
         bundler: 2.4
+        timeout-minutes: 10 
     - name: Run tests
       run: bundle exec rspec
