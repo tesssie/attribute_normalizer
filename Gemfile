@@ -7,6 +7,7 @@ group :development do
   gem 'bson_ext'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'bigdecimal', '~>1.4.4'
   gem 'guard-yard'
   gem 'mongoid', '> 4'
   gem 'pry'
