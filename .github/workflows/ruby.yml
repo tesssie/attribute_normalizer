@@ -20,6 +20,7 @@ jobs:
   test:
 
     runs-on: ubuntu-latest
+    timeout-minutes: 10  
     strategy:
       matrix:
         ruby-version: ['2.6', '2.7', '3.0']
@@ -35,6 +36,5 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
         bundler: 2.4
-        timeout-minutes: 10 
     - name: Run tests
       run: bundle exec rspec
